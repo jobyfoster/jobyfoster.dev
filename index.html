@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jobyfoster.dev</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+    <script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+  </head>
+  <body>
+    <nav class="nav-container">
+      <ul class="container nav-links">
+        <li class="nav-link"><a href="/">HOME</a></li>
+        <li class="nav-link"><a href="/#projects">PROJECTS</a></li>
+        <li class="nav-link"><a href="/resume">RESUME</a></li>
+      </ul>
+      <button class="nav-toggle"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+
+    <main class="hero container">
+      <div class="about-me-container">
+        <div class="introduction">
+          <div class="name-and-title">
+            <h1 class="name">Hi, I'm Joby!</h1>
+            <h3 class="title">Full Stack Software Developer</h3>
+          </div>
+
+          <div class="headshot-and-hand">
+            <img src="images/headshot.JPG" class="headshot" alt="" />
+            <span class="hand">👋</span>
+          </div>
+        </div>
+        <div class="hr"></div>
+        <div class="background-container">
+          <p class="background-text">
+            I am passionate about crafting purposeful and user-friendly
+            applications. My goal is not just to develop software but to create
+            solutions that propel educational and professional growth.
+          </p>
+
+          <p class="background-text">
+            I'm currently honing my full stack development skills at
+            <a
+              style="color: #60a5fa"
+              href="https://basecampcodingacademy.org/"
+              target="_blank"
+              >Base Camp Coding Academy</a
+            >, with graduation anticipated in May 2024.
+          </p>
+        </div>
+      </div>
+
+      <div class="skills-container">
+        <h1>What I Know</h1>
+        <div class="skills-grid">
+          <div class="skill"><i class="fab fa-python"></i> Python</div>
+          <div class="skill"><i class="fas fa-leaf"></i> Django</div>
+          <div class="skill"><i class="fab fa-html5"></i> HTML</div>
+          <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
+          <div class="skill"><i class="fab fa-js-square"></i> JavaScript</div>
+          <div class="skill"><i class="fab fa-react"></i> React.js</div>
+          <div class="skill"><i class="fas fa-database"></i> SQL</div>
+          <div class="skill"><i class="fa-brands fa-golang"></i> GoLang</div>
+        </div>
+      </div>
+    </main>
+
+    <section id="resume" class="resume-container container">
+      <div id="resume-cta" class="text-lg">
+        See my Path,
+        <a id="cta-ktt" href="/resume" target="_blank">View My Resume</a>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-container container">
+      <div class="projects">
+        <div class="project-card" id="eduflip-card">
+          <div class="project-info">
+            <h1 class="project-name">EduFlip</h1>
+            <p class="project-description">
+              EduFlip is an interactive flashcard study app designed to make
+              learning fun and efficient.
+            </p>
+            <p class="project-description">
+              Developed as a project at Base Camp Coding Academy, EduFlip offers
+              a unique platform for users to create, share, and study with
+              flashcards on various topics.
+            </p>
+          </div>
+          <div class="project-demo-container">
+            <video id="eduflip-video" class="player" playsinline controls>
+              <source src="videos/eduflip-demo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="project-card" id="snuscheck-card">
+          <div class="project-info">
+            <h1 class="project-name">SnusCheck</h1>
+            <p class="project-description">
+              Snus-Check specifically aims to make data breach research faster
+              and more efficient.
+            </p>
+            <p class="project-description">
+              This was my first personal project while attending BCCA.
+            </p>
+          </div>
+          <div class="project-demo-container">
+            <video id="snuscheck-video" class="player" playsinline controls>
+              <source src="videos/snuscheck-demo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="explore-my-work">
+      <div id="emw-cta">
+        Transforming <span id="emw-gradient">Ideas</span> Into Code
+      </div>
+      <a
+        id="emw-button"
+        href="https://github.com/jobyfoster"
+        target="_blank"
+        rel="noreferrer"
+        >Explore My Github</a
+      >
+    </section>
+
+    <footer class="footer">
+      <div class="container">© 2023 jobyfoster.dev - Joby Foster</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"
+      integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+    <script src="js/script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,842 @@
+/* Root Definition */
+:root {
+  --main-text: #e9eff5;
+  --secondary-text: #e8ebec;
+  --heading-font: "Poppins", sans-serif;
+  --body-font: "DM Sans", sans-serif;
+}
+
+/* Main CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Body Styling */
+body {
+  cursor: default;
+
+  font-family: var(--body-font);
+  color: var(--main-text);
+
+  line-height: 1.6;
+
+  background-image: url("/images/background3.png");
+  background-color: #020819;
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  color: var(--main-text);
+  margin-bottom: 0.5em;
+}
+
+/* Links */
+a {
+  color: var(--main-text);
+  text-decoration: none;
+  transition: all 1s ease;
+}
+
+/* Containers */
+.container {
+  width: 75%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #03dac6;
+  color: #121212;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #bb86fc;
+}
+
+/* Responsive Images */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Navigation Container */
+.nav-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Navigation Toggle Button */
+.nav-toggle {
+  margin-right: 2em;
+  color: black;
+  background-color: var(--main-text);
+  border: none;
+  font-size: clamp(16px, 20.8px, 25.6px);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+
+  width: 45px;
+  height: 44px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-toggle:hover {
+  transform: scale(1.1) rotate(10deg);
+}
+
+/* Navigation Links List */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 50px;
+
+  overflow: visible;
+  margin-right: 3em;
+}
+
+/* Individual Navigation Link */
+.nav-link {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+.nav-link a {
+  position: relative;
+  display: inline-block;
+  font-size: clamp(1em, 1.1em, 1.5em);
+  color: white;
+}
+
+/* Hover Effect for Navigation Link */
+.nav-link a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--main-text);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link a:hover::before {
+  width: 100%;
+}
+
+/* Hero Section Styling */
+.hero {
+  margin-top: 10em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+/* About Me Container */
+.about-me-container {
+  width: 600px;
+}
+
+/* Introduction Section */
+.introduction {
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  overflow: visible;
+}
+
+/* Name Styling */
+.name {
+  font-size: clamp(2em, 3.6em, 4em);
+  line-height: normal;
+  margin-bottom: 0;
+}
+
+/* Headshot and Hand Section */
+.headshot-and-hand {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 12px;
+  overflow: visible;
+}
+
+/* Hand Styling */
+.hand {
+  display: inline-block;
+  position: absolute;
+  transform-origin: 70% 70%;
+  overflow: hidden;
+  z-index: 2;
+  font-size: clamp(2.6em, 3em, 3.4em);
+}
+
+/* Headshot Styling */
+.headshot {
+  width: 130px;
+  height: auto;
+  display: block;
+  position: relative;
+  border-radius: 50%;
+}
+
+/* Title Styling */
+.title {
+  font-size: clamp(1.3em, 1.5em, 2.2em);
+  font-weight: normal;
+  color: var(--secondary-text);
+  margin-bottom: 0.25em;
+}
+
+/* Background Container */
+.background-container {
+  margin-top: 1.3em;
+}
+
+/* Background Text Styling */
+.background-text {
+  font-size: clamp(0.9em, 1.1em, 2em);
+  margin-bottom: 0.75em;
+}
+
+/* Skills Container Styling */
+.skills-container {
+  width: 550px;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.skills-container h1 {
+  text-align: center;
+  font-size: clamp(1.4em, 2em, 2.5em);
+  margin-bottom: 30px;
+}
+
+/* Skills Grid Layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 10px;
+  justify-items: center;
+}
+
+/* Individual Skill Styling */
+.skill {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: clamp(1em, 1.2em, 2.3em);
+  font-weight: 300;
+  text-shadow: rgba(219, 234, 254, 0.3) 1px 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  cursor: default;
+  transition: background-color 0.5s ease;
+}
+
+.skill i {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.skill:hover {
+  background-color: rgba(51, 65, 85, 0.5);
+  transform: scale(1.1);
+  transition: background-color 0.3s ease;
+}
+
+#resume {
+  align-items: center;
+  justify-content: center;
+  margin-top: 8em;
+}
+
+#resume-cta {
+  color: white; /* default color */
+  text-align: center;
+  font-size: clamp(2.5em, 3em, 3.2em);
+  font-weight: 600;
+  transition: color 0.3s ease-out, text-shadow 0.3s ease-out;
+}
+
+#resume:hover #resume-cta {
+  color: #dfdfdf; /* Lighter Gray */
+  transition-timing-function: ease-in;
+  text-shadow: 0 0 0.3em #ffffff21; /* Text glow */
+}
+
+#cta-ktt {
+  color: #0496ff;
+  text-decoration: underline solid transparent;
+  transition: text-decoration 0.3s ease-out, color 0.3s ease-out,
+    text-shadow 0.3s ease-in-out;
+}
+
+#resume:hover #cta-ktt {
+  text-decoration: underline solid #0496ff;
+  text-shadow: 0 0 10px #0496ff38;
+  transition-timing-function: ease-in;
+}
+
+/* Projects Container Styling */
+.projects-container {
+  margin-top: 8em;
+}
+
+.projects-heading {
+  font-size: clamp(2.8em, 3.4em, 3.7em);
+  text-align: center;
+}
+
+/* Projects Layout */
+.projects {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  gap: 5em;
+}
+
+/* Project Name Styling */
+.project-name {
+  font-size: clamp(2em, 2.3em, 2.7em);
+  line-height: normal;
+  color: var(--main-text);
+}
+
+/* Project Card Styling */
+.project-card {
+  padding: 2em 4em 2em;
+  background-color: rgba(2, 23, 68, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(51, 65, 85, 0.7);
+  border-radius: 8px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-description {
+  margin-bottom: 0.5em;
+  font-size: clamp(0.6em, 2vw, 1em);
+  color: var(--secondary-text);
+}
+
+.project-demo-container {
+  flex: 1;
+  margin: auto;
+}
+
+/* Video Player Styling */
+.player {
+  width: 100%;
+  overflow: hidden;
+}
+
+.plyr--video {
+  border-radius: 8px;
+}
+
+#snuscheck-card {
+  margin-left: auto;
+}
+
+/* Explore my work section */
+#explore-my-work {
+  margin: 8em 0;
+  text-align: center;
+  align-self: center;
+}
+
+/* Explore my work text */
+#emw-cta {
+  font-size: clamp(2.5em, 3em, 3.2em);
+  font-weight: 600;
+  margin-bottom: 0.75em;
+  color: white;
+}
+
+/* Explore my work text gradient */
+#emw-gradient {
+  background-color: #40c9ff;
+  background-image: linear-gradient(45deg, #40c9ff, #e81cff);
+  background-size: 100%;
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+
+  font-weight: 700;
+}
+
+/* Explore my work button */
+#emw-button {
+  padding: 12px 55px;
+  border-radius: 5px;
+
+  text-decoration: none;
+  color: white;
+
+  font-size: clamp(1em, 1.3em, 1.5em);
+
+  background-color: #318fce;
+  border: 1px #eeeeee94 solid;
+
+  transition: box-shadow 0.3s, background-color 0.3s, border 0.2s;
+  transition-timing-function: ease-in;
+}
+
+#emw-button:hover {
+  background-color: #379bdd;
+  border: 1px #eee solid;
+  box-shadow: 0px 0px 20px #5c5c5c70;
+  transition-timing-function: ease-out;
+}
+
+/* Footer Styling */
+.footer {
+  color: #cccccc;
+  font-size: 0.9em;
+  padding: 0.5em;
+  margin-top: auto;
+  width: 100%;
+}
+
+/* Horizontal Rule Styling */
+.hr {
+  width: 100%;
+  height: 1px;
+  background: var(--main-text);
+}
+
+#resume-img-container {
+  color: white;
+  width: 100%;
+  padding: 20px;
+}
+
+#resume-image {
+  width: 70%;
+  margin: 0 auto;
+
+  border: 1px solid #ccc;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for Mobile Devices */
+@media only screen and (max-width: 399px) {
+  /* Container Styling for Mobile */
+  .container {
+    width: 90%;
+  }
+
+  /* Navigation Toggle Styling for Mobile */
+  .nav-toggle {
+    height: 40px;
+    width: 50px;
+    margin-right: 1em;
+  }
+
+  /* Hero Section Styling for Mobile */
+  .hero {
+    flex-direction: column;
+    margin-top: 2em;
+  }
+
+  /* About Me Container Styling for Mobile */
+  .about-me-container {
+    width: 100%;
+  }
+
+  /* Introduction Styling for Mobile */
+  .introduction {
+    width: 100%;
+  }
+
+  /* Name Styling for Mobile */
+  .name {
+    font-size: clamp(1em, 2.6em, 3em);
+  }
+
+  /* Title Styling for Mobile */
+  .title {
+    font-size: clamp(1em, 1.1em, 2em);
+  }
+
+  /* Background Text Styling for Mobile */
+  .background-text {
+    font-size: clamp(0.8em, 1em, 1.2em);
+  }
+
+  /* Skills Container Styling for Mobile */
+  .skills-container {
+    margin-top: 2em;
+    width: 100%;
+  }
+
+  /* Skills Grid Layout for Mobile */
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Projects Container Styling for Mobile */
+  .projects-container {
+    margin-top: 2em;
+  }
+
+  /* Project Card Styling for Mobile */
+  .project-card {
+    width: 100%;
+    flex-direction: column;
+    padding: 1.5em 2em 1.5em;
+    gap: 1em;
+  }
+
+  /* Project Description Styling for Mobile */
+  .project-description {
+    font-size: clamp(0.85em, 2.5vw, 1.2em);
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 599px) {
+  .nav-container {
+    padding-left: 2em;
+  }
+
+  .nav-toggle {
+    width: 55px;
+    height: 42px;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .hero {
+    flex-direction: column;
+    margin-top: 2em;
+  }
+
+  .about-me-container {
+    width: 100%;
+  }
+
+  .introduction {
+    width: 100%;
+  }
+
+  .name {
+    font-size: clamp(2em, 3em, 3em);
+  }
+
+  .title {
+    font-size: clamp(1em, 1.1em, 2em);
+  }
+
+  .headshot-and-hand {
+    margin-right: 1.5em;
+  }
+
+  .headshot {
+    width: 115px;
+    margin-left: 5px;
+  }
+
+  .hand {
+    font-size: clamp(2.2em, 2.8em, 3.4em);
+  }
+
+  .background-text {
+    font-size: clamp(0.8em, 1em, 1.2em);
+  }
+
+  .skills-container {
+    margin-top: 2em;
+    width: 100%;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .skill {
+    align-content: center;
+  }
+
+  .projects-container {
+    margin-top: 2em;
+  }
+
+  .project-card {
+    width: 100%;
+    flex-direction: column;
+    padding: 1.5em 2em 1.5em;
+    gap: 1em;
+  }
+
+  .project-description {
+    font-size: clamp(0.9em, 2.6vw, 1.2em);
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .nav-container {
+    padding-left: 3em;
+  }
+
+  .nav-toggle {
+    width: 50px;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .hero {
+    flex-direction: column;
+    margin-top: 2em;
+  }
+
+  .about-me-container {
+    width: 100%;
+  }
+
+  .introduction {
+    width: 100%;
+  }
+
+  .name {
+    font-size: clamp(2em, 3.2em, 4em);
+  }
+
+  .title {
+    font-size: clamp(1.3em, 1.5em, 2em);
+  }
+
+  .headshot-and-hand {
+    margin-right: 2em;
+  }
+
+  .background-text {
+    font-size: clamp(1em, 1.2em, 1.5em);
+  }
+
+  .skills-container {
+    margin-top: 3em;
+    width: 100%;
+  }
+
+  .projects-container {
+    margin-top: 2em;
+  }
+
+  .project-card {
+    width: 100%;
+    flex-direction: column;
+    padding: 1.5em 2em 1.5em;
+    gap: 1em;
+  }
+
+  .project-description {
+    font-size: clamp(0.9em, 2.6vw, 1.2em);
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    width: 80%;
+  }
+
+  .hero {
+    flex-direction: column;
+    margin-top: 4em;
+  }
+
+  .about-me-container {
+    width: 100%;
+  }
+
+  .introduction {
+    width: 100%;
+  }
+
+  .name {
+    font-size: clamp(2em, 3.2em, 4em);
+  }
+
+  .title {
+    font-size: clamp(1.3em, 1.5em, 2em);
+  }
+
+  .headshot-and-hand {
+    margin-right: 2em;
+  }
+
+  .background-text {
+    font-size: clamp(1em, 1.2em, 1.5em);
+  }
+
+  .skills-container {
+    margin-top: 3em;
+    width: 100%;
+  }
+
+  .projects-container {
+    margin-top: 3em;
+  }
+
+  .project-card {
+    width: 100%;
+    flex-direction: column;
+    padding: 1.5em 2em 1.5em;
+    gap: 1em;
+  }
+
+  .project-description {
+    font-size: clamp(0.9em, 2.6vw, 1.2em);
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+  .container {
+    width: 80%;
+  }
+
+  .hero {
+    flex-direction: column;
+    margin-top: 5em;
+  }
+
+  .about-me-container {
+    width: 70%;
+  }
+
+  .introduction {
+    width: 100%;
+  }
+
+  .name {
+    font-size: clamp(2em, 3.2em, 4em);
+  }
+
+  .title {
+    font-size: clamp(1.3em, 1.5em, 2em);
+  }
+
+  .background-text {
+    font-size: clamp(1em, 1.2em, 1.5em);
+  }
+
+  .skills-container {
+    margin-top: 4em;
+    margin-left: auto;
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1439px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .introduction {
+    width: 100%;
+  }
+
+  .skills-container {
+    margin-top: 5em;
+    margin-left: auto;
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1599px) {
+  .about-me-container {
+    width: 525px;
+  }
+
+  .introduction {
+    width: 100%;
+  }
+
+  .headshot-and-hand {
+    margin-left: 2em;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  /* Styles for ultra-wide screens */
+}
