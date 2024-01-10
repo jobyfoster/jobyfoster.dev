@@ -36,7 +36,7 @@ tl.addLabel("backgroundText", ">-0.3")
   .from(".background-text", { x: -800, duration: 0.5, ease: "power4.out", stagger: 0.2 }, "backgroundText");
 
 // Skills section animation
-tl.addLabel("skills", ">0.2")
+tl.addLabel("skills", ">-0.2")
   .from(".skills-container", { x: 300, duration: 0.5, opacity: 0 }, "skills")
   .from(".skill", { y: 250, duration: 0.5, stagger: 0.05, ease: "power4.inOut" }, "<0.1")
 
@@ -45,9 +45,14 @@ tl.addLabel("resume")
   .from("#resume", { x: -400, opacity: 0, ease: "power4.inOut", duration: 0.5 }, "skills+=0.3")
 
 // Projects heading animation
-tl.addLabel("projects", ">0.3")
+tl.addLabel("projects", ">-0.3")
   .from("#eduflip-card", {x: -500, opacity: 0, duration: 0.5, ease: 'power2.inOut'}, "<0.4")
   .from("#snuscheck-card", {x: 500, opacity: 0, duration: 0.5, ease: 'power2.inOut'}, "<0.4")
+
+
+// Projects heading animation
+tl.addLabel("explore-my-work", ">-0.3")
+  .from("#explore-my-work", {x: -500, opacity: 0, duration: 0.5, ease: 'power2.inOut'}, "<0.4")
 
 // Hand animation
 gsap.set(".hand", {x: 72, y: -45, scaleX: -1})
