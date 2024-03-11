@@ -56,7 +56,7 @@ tl.addLabel("explore-my-work", ">-0.3")
 
 // Hand animation
 gsap.set(".hand", {x: 72, y: -45, scaleX: -1})
-tl.to(".hand", { rotation: 25, duration: 0.25, ease: "power3.inOut", yoyo: true, repeat: 9 }, "<1");
+tl.to(".hand", { rotation: 25, duration: 0.25, ease: "power3.inOut", yoyo: true, repeat: 9 }, "<-1.25");
 
 
 
