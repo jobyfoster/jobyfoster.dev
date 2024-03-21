@@ -345,11 +345,6 @@ img {
   transition-timing-function: ease-in;
 }
 
-/* Projects Container Styling */
-.projects-container {
-  margin-top: 8em;
-}
-
 .projects-heading {
   font-size: clamp(2.8em, 3.4em, 3.7em);
   text-align: center;
@@ -401,6 +396,38 @@ img {
 .project-demo-container {
   flex: 1;
   margin: auto;
+}
+
+.project-demo-container .image-overlay-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%; /* Ensure it doesn't exceed the parent container */
+}
+
+.project-demo-container img.project-screenshot {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: for rounded corners */
+}
+
+a.btn-live-demo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 10px; /* More rounded corners for a modern look */
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+a.btn-live-demo:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+  transform: translate(-50%, -50%) scale(1.05); /* Slightly larger on hover */
 }
 
 /* Video Player Styling */

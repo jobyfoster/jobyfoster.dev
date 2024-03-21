@@ -47,8 +47,8 @@ tl.addLabel("resume")
 // Projects heading animation
 tl.addLabel("projects", ">-0.3")
   .from("#eduflip-card", {x: -500, opacity: 0, duration: 0.5, ease: 'power2.inOut'}, "<0.4")
-  .from("#snuscheck-card", {x: 500, opacity: 0, duration: 0.5, ease: 'power2.inOut'}, "<0.4")
-
+  .from("#sharespace-card", {x: 500, opacity: 0, duration: 0.5, ease: 'power2.inOut'}, "<0.4")
+  .from("#skinpro-card", {x: -500, opacity: 0, duration: 0.5, ease: 'power2.inOut'}, "<0.4")
 
 // Projects heading animation
 tl.addLabel("explore-my-work", ">-0.3")
